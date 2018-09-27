@@ -9,8 +9,6 @@ public class User {
 	private int id;
 	private String username;
 	private String password;
-	private int age;
-	
 	public User(){}
 
 	public int getId() {
@@ -37,13 +35,5 @@ public class User {
 		this.password = password;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
 	
 }

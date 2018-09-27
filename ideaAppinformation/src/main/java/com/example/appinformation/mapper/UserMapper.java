@@ -10,9 +10,13 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserMapper {
-	
-	void insert(User user);
-	void delete(int id);
-	void edit(User user);
-	User find(int id);
+	/**
+	 * 登录
+	 * @param id
+	 * @return
+	 */
+	User find(String username, String password);
+
+
+
 }

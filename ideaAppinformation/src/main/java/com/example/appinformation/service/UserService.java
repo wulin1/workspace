@@ -14,31 +14,21 @@ import javax.annotation.Resource;
  */
 
 @Service("userService")
-@ComponentScan({"SpringBoot_jsp.springbootJsp.mapper"})
+@ComponentScan({"com.example.appinformation.mapper"})
 public class UserService implements UserIService {
-
-	@Resource 
+	@Resource
 	private UserMapper userMapper;
-	
-	@Override
-	public void insert(User user) {
-		userMapper.insert(user);
-	}
 
+	/**
+	 * 登录
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	@Override
-	public void delete(int id) {
-		userMapper.delete(id);
-		
-	}
+	public User find(String username, String password) {
 
-	@Override
-	public void edit(User user) {
-		userMapper.edit(user);		
-	}
-
-	@Override
-	public User find(int id) {
-		return userMapper.find(id);
+		return userMapper.find(username,password);
 	}
 
 }

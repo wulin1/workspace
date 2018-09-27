@@ -8,9 +8,6 @@ import com.example.appinformation.pojo.User;
  *
  */
 public interface UserIService {
-	
-	void insert(User user);
-	void delete(int id);
-	void edit(User user);
-	User find(int id);
+
+	User find(String username, String password);
 }
